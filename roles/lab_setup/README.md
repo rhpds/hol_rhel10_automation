@@ -1,4 +1,4 @@
-# lb1136_rhel10_hol
+# lab_setup
 
 Role Name
 =========

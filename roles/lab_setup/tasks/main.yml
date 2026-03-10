@@ -9,6 +9,6 @@
     file: lab-config.yml
 
 - name: Include letsencrypt certificate for node3
-  when: lb1136_rhel10_hol_lecertificate_for_node3 | bool
+  when: hol_rhel10_automation_lab_setup_lecertificate_for_node3 | bool
   ansible.builtin.include_tasks:
     file: lecertificate.yml
