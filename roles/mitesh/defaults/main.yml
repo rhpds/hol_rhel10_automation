@@ -1,0 +1,19 @@
+---
+hol_rhel10_automation_lab_setup_config: true
+
+# -----------------------------------------------
+# Define custom internal domain
+# -----------------------------------------------
+# hol_rhel10_automation_lab_setup_internal_domain: <CHANGEME>
+
+# -----------------------------------------------
+# Register node2 with RHSM
+# -----------------------------------------------
+hol_rhel10_automation_lab_setup_use_rhsm_for_node2: false
+hol_rhel10_automation_lab_setup_sat_org: <CHANGEME>
+hol_rhel10_automation_lab_setup_sat_activation_key: <CHANGEME>
+
+# -----------------------------------------------
+# Issue LeCertificate for Node3
+# -----------------------------------------------
+hol_rhel10_automation_lab_setup_lecertificate_for_node3: true
