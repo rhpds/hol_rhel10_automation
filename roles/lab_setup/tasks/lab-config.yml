@@ -12,7 +12,12 @@
     dest: "/var/tmp/lab-setup-progress.log"
     line: "[{{ ansible_hostname }}] hol_rhel10_automation_lab_setup role processing"
 
-- name: Setup Internal domain name
+- name: "rhel10-setup - Setup Internal domain name "
+  when: hol_rhel10_automation_lab_setup_internal_domain is defined
+  ansible.builtin.set_fact:
+    internal_domain: "{{ hol_rhel10_automation_lab_setup_internal_domain }}"
+
+- name: Setup Internal domain name when not defined
   when: hol_rhel10_automation_lab_setup_internal_domain is not defined
   block:
     - name: "rhel10-setup - determine subdomain-internal from resolv.conf"
@@ -22,7 +27,7 @@
 
     - name: "rhel10-setup - set fact internal_domain"
       ansible.builtin.set_fact: 
-        internal_domain: "{{ domain_result.stdout }}"
+        internal_domain: "{{ hol_rhel10_automation_lab_setup_internal_domain | default(domain_result.stdout) }}"
 
 - name: "rhel10-setup - fetch pub ssh keys from bastion"
   delegate_to: "{{ groups['bastions'][0] }}"
