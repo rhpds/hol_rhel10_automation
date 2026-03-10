@@ -1,0 +1,17 @@
+namespace: rhpds
+name: hol_rhel10_automation
+version: 1.0.0
+readme: README.md
+authors:
+- Mitesh Sharma <mitsharm@redhat.com>
+description: Custom collection for setup HOL RHEL10 workshop
+license:
+- GPL-2.0-or-later
+license_file: ''
+tags: []
+dependencies: {}
+repository: https://github.com/rhpds/hol_rhel10_automation.git
+documentation: https://github.com/rhpds/hol_rhel10_automation.git
+homepage: https://github.com/rhpds/hol_rhel10_automation.git
+issues: https://github.com/rhpds/hol_rhel10_automation/issue/tracker
+build_ignore: []
