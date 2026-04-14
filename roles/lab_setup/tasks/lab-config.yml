@@ -101,6 +101,21 @@
         mode: "400"
         content: "{{ guid }}"
 
+    ##    NOTE:  For the time being, the admin and 
+    ##           student account are the same 'student_name'
+
+    - name: "rhel10-setup - create gpte-admin config file"
+      ansible.builtin.copy:
+        dest: "/root/RHEL10-Workshop/config/gpte-admin.txt"
+        mode: "400"
+        content: "{{ student_name }}"
+
+    - name: "rhel10-setup - create gpte-adminpw config file"
+      ansible.builtin.copy:
+        dest: "/root/RHEL10-Workshop/config/gpte-adminpw.txt"
+        mode: "400"
+        content: "{{ student_password }}"
+
     - name: "rhel10-setup - create gpte-student config file"
       ansible.builtin.copy:
         dest: "/root/RHEL10-Workshop/config/gpte-student.txt"
